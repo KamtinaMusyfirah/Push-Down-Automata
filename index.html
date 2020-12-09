@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css" />
+
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Solway&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    
+    <title>Chomsky Hierarchy</title>
+  </head>
+  <body>
+    <!-- Start header -->
+    <header class="top-header">
+      <nav class="navbar header-nav navbar-expand-lg">
+          <div class="container-fluid">
+            <nav class="navbar ">
+              <span class="navbar-brand mb-0 h1">Kamtina Musyfirah</span>
+            </nav>
+
+              <div class="collapse navbar-collapse justify-content-end" id="navbar-wd">
+                  <ul class="navbar-nav">
+                      <li><a class="nav-link active" href="#">Home</a></li>
+                      <li><a class="nav-link" href="https://kamtinamusyfirah.github.io/tba-assignment1/">Teori Bahasa dan Otomata</a></li>
+                      <li><a class="nav-link" href="https://kamtinamusyfirah.github.io/tba-assignment2/">Notasi Big O</a></li>
+                      <li><a class="nav-link" href="https://kamtinamusyfirah.github.io/-Non-Deterministic-Finite-Automata/">DFA</a></li>
+                      <li><a class="nav-link" href="https://kamtinamusyfirah.github.io/RegulerExpression/">Regular Expression</a></li>
+                      <li><a class="nav-link" href="https://kamtinamusyfirah.github.io/Context-Free-Grammar/">Context Free Grammar</a></li>
+                      <li><a class="nav-link" href="https://kamtinamusyfirah.github.io/RegulerExpression/">Chomsky Hierarcy</a></li>
+                      <li><a class="nav-link" href="https://kamtinamusyfirah.github.io/RegulerExpression/">Mesin Turing</a></li>
+                      <li><a class="nav-link" href="#">About</a></li>
+                  </ul>
+              </div>
+          </div>
+      </nav>
+  </header>
+  <!-- End header -->
+
+  <!--Carousel-->
+  <div class="jumbotron jumbotron-fluid">
+    <div class="container">
+      <h1 class="display-4">Teori Bahasa dan Otomata</h1>
+    </div>
+  </div>
+  <!--End Carousel-->
+  <h1>Chomsky Hierarchy</h1>
+  <center><img src="hierarchy.PNG" alt=""></center>
+
+  <!-- section -->
+  <div class="container">
+    <div class="card">
+        <div class="contentBx">
+            <h2>Type 0 : Unrestricted Grammar (UG)</h2>
+            <p>
+              Dalam teori automata. class Unrestricted Grammar adalah class grammar
+              yang paling umum dalam hierarchy chomsky. Tidak ada batasan yang dibuat
+              pada aturan produksi type 0 ini, selain setiap sisi kirinya yang tidak kosong.
+              grammar class ini dapat menghasilkan bahasa yang dapat dihitung secara
+              recursively enumerable.
+            </p>
+              <center>M = = (Q, Σ, Γ, δ, q<sub>0</sub>, B, F)</center>
+            <p>
+              Q = the set of internal states
+            </p>
+            <p>
+              Σ = the input symbol
+            </p>
+            <p>
+              Γ = a finite set of symbols called the tape symbols
+            </p>
+            <p>
+              δ = the transaction function
+            </p>
+            <p>
+              q<sub>0</sub> = initial state
+            </p>
+            <p>
+              B = the blank symbols
+            </p>
+            <p>
+              F = set of final or accepting state
+            </p>
+            <p>
+              Aturan Produksi type 0 ini yaitu : <br>
+              <center>α → β</center>
+            </p>
+            <p>
+              ciri : α,β ∈ (V<sub>T</sub> | V<sub>N</sub> )*, |α| > 0
+            </p>
+            <p>
+              Sebagai contoh,
+            </p>
+            <center>
+              Sab → ba <br>
+              A → S
+            </center>
+        </div>
+    </div>
+
+    <div class="card">
+      <div class="contentBx">
+          <h2>Type 1 : Context Sensitive Grammar (CSG) </h2>
+          <p>
+            Context Sensitive Grammar ( CSG ) adalah formal grammar di mana sisi kiri dan sisi kanan dari setiap aturan produksi 
+            dapat dikelilingi oleh konteks terminal dan simbol nonterminal. grammar ini lebih umum daripada context free grammar, 
+            dalam arti bahwa ada bahasa yang dapat dijelaskan oleh CSG tetapi tidak dengan Context Free Grammar. Grammar ini kurang 
+            umum (dalam arti yang sama) jika dibandingkan Unrestricted grammar. 
+            Dengan demikian, CSG diposisikan di antara context free grammar dan Unrestricted grammar dalam hierarki Chomsky.
+          </p>
+            <center>P = (Q, Σ, Γ, δ, q<sub>0</sub>, Z<sub>0</sub>, F)</center>
+          <p>
+            Q = the set of internal states
+          </p>
+          <p>
+            Σ = the input symbol
+          </p>
+          <p>
+            Γ = a finite set of symbols called the stack symbols
+          </p>
+          <p>
+            δ = the transaction function
+          </p>
+          <p>
+            q<sub>0</sub> = initial state
+          </p>
+          <p>
+            Z<sub>0</sub> = start symbols
+          </p>
+          <p>
+            F = set of final state
+          </p>
+          <p>
+            Aturan Produksi type 1 ini yaitu : <br>
+            <center>α → β</center>
+            <center></center>
+          </p>
+          <p>
+            ciri : α,β ∈ (V<sub>T</sub> | V<sub>N</sub> )*, 0 < |α| ≤ |β|
+          </p>
+          <p>
+            Sebagai contoh,
+          </p>
+          <center>
+            S → AB <br>
+            AB → abc
+          </center>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="contentBx">
+          <h2>Type 2 : Context Free Grammar (CSG) </h2>
+          <p>
+            Bahasa yang dihasilkan oleh context free grammar ini dikenal dengan Push down automata. Produksi sisi kiri hanya dapat memiliki satu variabel.
+            Adapun disisi kanannya tidak ada batasan.
+            Context free grammar atau lebih tepatnya subset dari deterministic context-free language 
+            adalah dasar teoretis untuk struktur frase dari sebagian besar bahasa pemrograman , meskipun sintaksnya juga mencakup name resolution 
+            yang sensitive konteks karena deklarasi dan cakupan. 
+            Seringkali grammar ini digunakan untuk mempermudah penguraian.
+          </p>
+            <center>G = (V, T, P, S)</center>
+          <p>
+            Q = set of variabels
+          </p>
+          <p>
+            T = terminal
+          </p>
+          <p>
+            P = set of productions
+          </p>
+          <p>
+            S = start symbols
+          </p>
+          <p>
+            Aturan Produksi type 2 ini yaitu : <br>
+            <center>α → β</center>
+          </p>
+          <p>
+            ciri : α ∈ V<sub>N</sub> ,β ∈ (V<sub>T</sub> | V<sub>N</sub> )*
+          </p>
+          <p>
+            Sebagai contoh,
+          </p>
+          <center>
+            S → A <br>
+            A → a
+          </center>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="contentBx">
+          <h2>Type 3 : Reguler Grammar (RG) </h2>
+          <p>
+            Type 3 ini adalah bentuk grammar yang paling terbatas. Reguler grammar membatasi aturannya pada 
+            satu nonterminal di sisi kiri dan sisi kanan yang terdiri dari satu terminal, memungkinkan untuk diikuti oleh satu nonterminal disebelah kanan juga.
+            Reguler grammar ini biasanya digunakan untuk menentukan pola pencarian dan struktur leksikal bahasa pemrograman. 
+          </p>
+          <p>
+            Aturan Produksi type 3 ini yaitu : <br>
+            <center>α → β</center>
+          </p>
+          <p>
+            ciri : α ∈ V<sub>N</sub> ,β ∈ {V<sub>T</sub>, V<sub>T</sub> V<sub>N</sub>} atau α ∈ V<sub>N</sub> ,β ∈ {V<sub>T</sub>, V<sub>N</sub> V<sub>T</sub>}
+          </p>
+          <p>
+            Sebagai contoh,
+          </p>
+          <center>
+            S → aA<br>
+            A → Sb
+          </center>
+      </div>
+    </div>
+    <img src="detail.PNG" alt="">
+
+    <div class="card">
+      <div class="contentBx">
+          <h2>Sumber</h2>
+          <p>
+            <a href="https://www.geeksforgeeks.org/chomsky-hierarchy-in-theory-of-computation/">https://www.geeksforgeeks.org/chomsky-hierarchy-in-theory-of-computation/</a>
+          </p>
+          <p>
+            <center><a href="https://en.wikipedia.org/wiki/Chomsky_hierarchy">https://en.wikipedia.org/wiki/Chomsky_hierarchy</a></center>
+          </p>
+      </div>
+    </div>
+
+  <div class="about1">
+    <h2>ABOUT</h2>
+    <hr>
+  </div>
+
+  <div class="about">
+    <div class="box">
+      <div class="icon">
+        <i class="fa fa-map-marker" aria-hidden="true"></i>
+      </div>
+      <div class="details">
+        <h3>Sinjai</h3>
+      </div>
+    </div>
+
+    <div class="box">
+      <div class="icon">
+        <i class="fa fa-github" aria-hidden="true"></i>
+      </div>
+      <div class="details">
+        <h3>KamtinaMusyfirah</h3>
+      </div>
+    </div>
+    
+    <div class="box">
+      <div class="icon">
+        <i class="fa fa-envelope" aria-hidden="true"></i>
+      </div>
+      <div class="details">
+        <h3>kamtinamusyfirah12@gmail.com</h3>
+      </div>
+    </div>
+  </div>
+  <!-- end section -->
+
+      <!-- Optional JavaScript -->
+      <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+  </body>
+</html>
